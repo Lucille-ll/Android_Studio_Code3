@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+
+        //以后再新建项目，就把这2行代码复制过去
+        //maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        //如果上面的阿里云镜像不行，就尝试用下面的的试试。如果用下面的，上面的就注释掉。
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://dl.google.com/dl/android/maven2' }
+
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+
+        //以后再新建项目，就把这2行代码复制过去
+        //maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        //如果上面的阿里云镜像不行，就尝试用下面的的试试。如果用下面的，上面的就注释掉。
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://dl.google.com/dl/android/maven2' }
+
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
